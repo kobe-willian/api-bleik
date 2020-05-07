@@ -49,7 +49,7 @@ function acceptOffer(offer) {
 }
 
 function declineOffer(offer) {
-  offer.accept((e) => {
+  offer.decline((e) => {
     if (e) {
       console.log('erro em decline');
       console.log(e);
@@ -58,9 +58,12 @@ function declineOffer(offer) {
 }
 
 function processOffer(offer) {
+  console.log('Offer = ')
+  console.log(offer)
   if (offer.isGlitched() || offer.state === 11) {
     console.log('Offer was glitched, declining.');
   } else if (offer.partner.getSteamID64() === config.ownerID) {
+    console.log('Auto accept the offer')
     acceptOffer(offer);
   } else {
     let ourItems = offer.itemsToGive;
@@ -90,9 +93,11 @@ function processOffer(offer) {
     console.log('ourValue = ' + ourValue);
     console.log('theirValue = ' + theirValue);
 
-    if (ourBalue <= theirValue) {
+    if (ourValue <= theirValue) {
+      console.log('accept')
       acceptOffer(offer);
     } else {
+      console.log('decline')
       declineOffer(offer);
     }
   }
