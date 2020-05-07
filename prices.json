@@ -1,0 +1,10 @@
+{
+  "Test item": {
+    "buy": 1,
+    "sell": 1
+  },
+  "Test item 2": {
+    "buy": 2,
+    "sell": 3
+  }
+}
