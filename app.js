@@ -16,9 +16,9 @@ const manager = new TradeOfferManager({
 
 const logOnOptions = {
   accountName: config.username,
-  password: config.password
+  password: config.password,
   // need sharedSecret from steam
-  // twoFactorCode: SteamTotp.generateAuthCode(config.sharedSecret)
+  twoFactorCode: SteamTotp.generateAuthCode(config.sharedSecret)
 };
 
 client.logOn(logOnOptions);
@@ -40,7 +40,7 @@ client.on('webSession', (sessionid, cookies) => {
 
 function acceptOffer(offer) {
   offer.accept((e) => {
-    community.checkConfirmation();
+    community.checkConfirmations();
     if (e) {
       console.log('erro em accept');
       console.log(e);
