@@ -2,7 +2,7 @@
 
 1. use username and password in config.js
 
-2. insert code in terminal that arrives in the email  after login
+2. insert code in terminal that arrives in the email, phone or desktop authenticato after login
 
 3. go to prices.json and add item to test
 
