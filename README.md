@@ -6,7 +6,11 @@
 
 3. go to prices.json and add item to test
 
-4. go to link with another steam account and make new offer
+4. use the desktop authenticator to jump mobile auth
+add "sharedSecret" and "identitySecret" in config.js
+https://github.com/Jessecar96/SteamDesktopAuthenticator
+
+5. go to link with another steam account and make new offer
 https://steamcommunity.com/tradeoffer/new/?partner=201786328&token=JTQ5e0dh
 
-5. if done, the terminal will show the message
+6. if done, the terminal will show the message

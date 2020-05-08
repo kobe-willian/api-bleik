@@ -105,6 +105,5 @@ function processOffer(offer) {
 
 client.setOption('promptSteamGuardCode', false);
 manager.on('newOffer', (offer) => {
-  console.log('a');
   processOffer(offer);
 });
